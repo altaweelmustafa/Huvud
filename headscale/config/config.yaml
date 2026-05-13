@@ -1,0 +1,40 @@
+server_url: https://headscale.yourdomain.com
+listen_addr: 0.0.0.0:8080
+metrics_listen_addr: 0.0.0.0:9090
+grpc_listen_addr: 0.0.0.0:50443
+
+dns:
+  magic_dns: false
+
+  override_local_dns: true
+
+  nameservers:
+    global:
+      - 1.1.1.1
+      - 8.8.8.8
+      - 2606:4700:4700::1111
+      - 2606:4700:4700::1001
+
+noise:
+  private_key_path: /etc/headscale/noise_private.key
+
+prefixes:
+  v4: 100.64.0.0/10
+  v6: fd7a:115c:a1e0::/48
+
+derp:
+  server:
+    enabled: false
+  urls:
+    - https://controlplane.tailscale.com/derpmap/default
+
+database:
+  type: sqlite3
+
+  sqlite: 
+    path: /etc/headscale/db.sqlite
+
+grpc_allow_insecure: true
+
+http_headers:
+  Access-Control-Allow-Origin: "*"
