@@ -35,7 +35,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=yourpassword
+      - GF_SECURITY_ADMIN_PASSWORD=firefly1122
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
     restart: unless-stopped
@@ -65,4 +65,25 @@ services:
       - ./dashboard:/usr/share/nginx/html
     ports:
       - "80:80"
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    network_mode: host    
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    restart: unless-stopped
+
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    network_mode: host
+    environment:
+      TZ: 'Asia/Jerusalem'
+      WEBPASSWORD: 'firefly1122'
+      DNSMASQ_LISTENING: 'all'
+    volumes:
+      - ./pihole/etc-pihole:/etc/pihole
+      - ./pihole/etc-dnsmasq.d:/etc/dnsmasq.d
     restart: unless-stopped
