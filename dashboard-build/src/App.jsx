@@ -202,7 +202,7 @@ function Sidebar({ active, setActive }) {
         <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
           {[0,1,2].map(i => <div key={i} style={{ width: 20, height: 2, background: TEAL, borderRadius: 1 }} />)}
         </div>
-        <span style={{ fontSize: 18, fontWeight: 700, color: TEAL }}>NetOps</span>
+        <span style={{ fontSize: 18, fontWeight: 700, color: TEAL }}>Huvud</span>
       </div>
       <nav style={{ flex: 1, padding: "10px 0" }}>
         {NAV.map(item => {
