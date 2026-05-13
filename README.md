@@ -26,7 +26,7 @@ Click any pin to see hostname, IP, district, status, and exact coordinates. The 
 
 The map loads even with zero registered nodes.
 
-![map](./imgs/Screencast_20260514_011727.gif)
+![map](imgs/Screencast_20260514_011727.gif)
 
 ---
 
