@@ -10,6 +10,7 @@ export const BORDER  = "#d1d5db";
 export const GREEN   = "#16a34a";
 export const RED     = "#dc2626";
 export const AMBER   = "#d97706";
+export const GRAY_67   = "#676767";
 
 export const STORAGE_KEY = "huvud_config";
 
@@ -28,11 +29,11 @@ export const DISTRICT_COORDS = {
 };
 
 export const NAV = [
-  { id: "overview",    label: "Overview",    icon: "⊞" },
-  { id: "map",         label: "Map",         icon: "◎" },
-  { id: "nodes",       label: "Nodes",       icon: "○" },
-  { id: "users",       label: "Users",       icon: "□" },
-  { id: "coordinates", label: "Coordinates", icon: "⌖" },
-  { id: "uptime",      label: "Uptime",      icon: "◈" },
-  { id: "settings",    label: "Settings",    icon: "⚙" },
+  { id: "overview",    label: "Overview",    icon: "fa-solid fa-circle-info" },
+  { id: "map",         label: "Map",         icon: "fa-solid fa-compass" },
+  { id: "nodes",       label: "Nodes",       icon: "fa-solid fa-server" },
+  { id: "users",       label: "Users",       icon: "fa-solid fa-user" },
+  { id: "coordinates", label: "Coordinates", icon: "fa-solid fa-map-pin" },
+  { id: "uptime",      label: "Uptime",      icon: "fa-solid fa-stopwatch" },
+  { id: "settings",    label: "Settings",    icon: "fa-solid fa-gear" },
 ];
